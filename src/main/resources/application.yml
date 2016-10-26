@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: eureka
+
+server:
+  port: ${vcap.application.port:8761}
+
+eureka:
+  server:
+    wait-time-in-ms-when-sync-empty: 0
+    enable-self-preservation: false
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    serviceUrl: 
+      defaultZone: http://eureka-serviceregistry.mybluemix.net/eureka
+security:
+  basic:
+    enabled: false
+    
+ 
+ 
